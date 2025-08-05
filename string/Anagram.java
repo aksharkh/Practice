@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args){
-        String name1="lisjen";
+        String name1="listen";
         String name2="silent";
         System.out.println(Algo(name1, name2));
     }
@@ -16,6 +16,6 @@ public class Anagram {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
         return  Arrays.equals(arr1,arr2);
-        
+
     }
 }
