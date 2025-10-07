@@ -2,8 +2,11 @@ package string;
 
 public class Palindrome {
     public static void main(String[] args){
-        String str="akshar";
+        String str="P #e  e# p";
         System.out.println(Algo(str));
+        System.out.println(isPalindrome(str));
+        System.out.println(isPalindrome1(str));
+        System.out.println(Algo1(str));
 
 
     }
@@ -18,7 +21,7 @@ public class Palindrome {
         return true;
     }
 
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
 
         String r="";
 
@@ -51,7 +54,7 @@ public class Palindrome {
 
     }
 
-    public boolean isPalindrome1(String s) {
+    public static boolean isPalindrome1(String s) {
         String cleaned = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 
         int i = 0, j = cleaned.length() - 1;
@@ -65,6 +68,21 @@ public class Palindrome {
         }
 
         return true;
+    }
+
+    public static boolean Algo1(String str){
+        int l=0, e= str.length()-1;
+
+        while (l<e){
+            if(str.charAt(l)!= str.charAt(e)){
+                return false;
+
+            }
+            l++;
+            e--;
+        }
+        return true;
+
     }
 
 }
