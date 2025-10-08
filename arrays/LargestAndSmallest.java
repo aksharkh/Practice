@@ -13,5 +13,26 @@ public class LargestAndSmallest {
         }
         System.out.println(max);
         System.out.println(min);
+        System.out.println(largest(arr));
+        System.out.println(small(arr));
+    }
+
+    public static int largest(int[] arr){
+        int larg=arr[0];
+        for(int n:arr){
+            if(n>larg) larg=n;
+        }
+        return larg;
+    }
+
+
+    public static int small(int[] arr){
+        int small=arr[0];
+
+        for(int n: arr){
+            if(n<small) small=n;
+        }
+
+        return small;
     }
 }
